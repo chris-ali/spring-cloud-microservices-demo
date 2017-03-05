@@ -1,0 +1,13 @@
+---
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/chris-ali/spring-cloud-microservices-demo
+          search-paths: config-data
+        # "native" is used when the native profile is active, for local tests with a classpath repo:
+        native:
+          search-locations: classpath:offline-repository/
+server:
+  port: 8001
